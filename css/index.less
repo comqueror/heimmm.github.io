@@ -1,0 +1,258 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    // height: 1200px;
+    background-color: #f2f4f7;
+}
+
+a {
+    text-decoration: none;
+    color: #707070;
+}
+
+// 当屏幕大于750px，html字体大小不变
+@media screen and (min-width:750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+
+.warp {
+    background-color: #fff;
+    padding-bottom: 1.1467rem;
+}
+
+.header {
+    height: 2.1333rem;
+    border-bottom: .0267rem solid #eaeaea;
+    font-family: Microsoft YaHei, Microsoft YaHei-Regular;
+    // font-weight: 400;
+    text-align: center;
+    line-height: 2.1333rem;
+    font-size: .9333rem;
+    color: #1c1c1c;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.2rem 0 1.6rem 0;
+
+    .item {
+        display: flex;
+        width: 33.33%;
+        // 必须有flex属性才能
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 3.7067rem;
+            height: 3.7067rem;
+        }
+
+        span {
+            font-size: .6667rem;
+            color: #707070;
+        }
+
+        &:nth-child(-n+3) {
+            margin-bottom: 1.6533rem;
+        }
+    }
+}
+
+.go {
+    margin: 0 .2667rem 0 .48rem;
+}
+
+.content {
+    padding: 1.0667rem .64rem;
+    background-color: #fff;
+    margin-top: .2667rem;
+
+    .con-hd {
+        height: 1.0133rem;
+        display: flex;
+        justify-content: space-between;
+        height: 1.0133rem;
+        line-height: 1.0133rem;
+        margin-bottom: .9067rem;
+
+        h4 {
+            position: relative;
+            // h4默认有margin
+            margin: 0;
+            font-size: .7467rem;
+            // padding-left: 1.1333rem;
+            color: #333;
+
+            // &::before {
+            //     position: absolute;
+            //     left: 0rem;
+            //     top: 0;
+            //     width: 1.0133rem;
+            //     height: 1.0133rem;
+            //     content: "";
+            //     background: url(../icons/i2.png) no-repeat;
+            //     background-size: 1.0133rem 1.0133rem;
+            // }
+            .icon {
+                display: inline-block;
+                width: 1.0133rem;
+                height: 1.0133rem;
+                // 行内块水平居中
+                vertical-align: middle;
+            }
+
+        }
+
+        .more {
+            font-size: .5867rem;
+            color: #999;
+        }
+    }
+}
+
+.get_job_focus {
+    position: relative;
+
+    div[class^="swiper-button"] {
+        color: #2e2e2e;
+        font-size: 5.3333rem;
+    }
+
+    .swiper {
+        height: 100%;
+        width: 14.4rem;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        // 竖向显示
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        // 左右两边（所有）大小
+        transform: scale(0.8);
+        // 左右（所有）透明度
+        opacity: 0.6;
+
+        a {
+            width: 9.0133rem;
+            height: 10.0267rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        p {
+            width: 9.0133rem;
+            font-size: .6667rem;
+            margin-top: .64rem;
+            color: #333;
+            opacity: 0;
+        }
+    }
+
+    // .swiper-slide-active当前中间的
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active,
+    .swiper-slide-active p {
+        transform: scale(1);
+        z-index: 999;
+        opacity: 1;
+    }
+}
+
+// 学习模块轮播图
+.study_con {
+    padding-bottom: 3.7333rem;
+}
+
+.study {
+    overflow: hidden;
+
+    .mySwiper {
+        padding: .2667rem;
+
+        // width: 100%;
+        // height: 100%;
+    }
+
+    .swiper-slide {
+        // text-align: center;
+        font-size: .48rem;
+        background: #fff;
+        width: 7.7333rem;
+        height: 9.0667rem;
+        border-radius: .2667rem;
+        box-shadow: 0 0 .2667rem rgba(0, 0, 0, .1);
+
+        // /* Center slide text vertically */
+        // a {
+        //     display: block;}
+
+        h5 {
+            font-size: .6933rem;
+            margin: .5333rem 0;
+            font-weight: 400;
+            padding: 0 .2667rem;
+        }
+
+        p {
+            font-size: .6933rem;
+            color: #ff4400;
+            padding: 0 .2667rem;
+        }
+    }
+}
+
+.footer {
+    // 固定定位会脱标,不占位置,所以要在上面的大盒子section设置padding
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 2.9333rem;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    display: flex;
+    padding: .5333rem;
+    border-top: .0267rem solid #ccc;
+
+    .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 1.04rem;
+            height: 1.0933rem;
+        }
+
+        p {
+            font-size: .5867rem;
+            color: #666;
+            margin-top: .2667rem;
+        }
+    }
+}
